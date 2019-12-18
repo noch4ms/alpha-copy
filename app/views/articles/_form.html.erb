@@ -13,9 +13,7 @@
 <div class="article-title">
     <h2 class="center">
     Title:
-    <% if session[:user_id] == article.user_id || session[:user_id] == 1 %>
-        <%= form.text_field :title %>
-    <% end %>
+    <%= form.text_field :title %>
     </h2>
 </div>
 
