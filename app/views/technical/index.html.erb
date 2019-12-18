@@ -1,0 +1,12 @@
+<h1 class="center">Technical problem?</h1> 
+
+<%= form_with do |form| %>
+  <div class="field center">
+    <%= form.label "2 * pi * #@r ^ 2" %>
+    <%= form.label 2 * Math::PI * (@r**@r) %>
+  </div>
+
+  <div class="actions center">
+    <%= form.submit %>
+  </div>
+<% end %>
