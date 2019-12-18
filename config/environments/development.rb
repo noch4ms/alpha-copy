@@ -1,4 +1,5 @@
 Rails.application.configure do
+    config.hosts << "3000-a05e17e5-cbba-4f1a-8f62-29a85e084b09.ws-eu01.gitpod.io"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

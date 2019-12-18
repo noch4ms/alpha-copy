@@ -11,17 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :username %>
+<div class="well col-xs-8 col-xs-offset-2 center">
+<div class="article-title">
+    <h2 class="center">
+    Username: <br>
     <%= form.text_field :username %>
-  </div>
+    </h2>
+</div>
 
-  <div class="field">
-    <%= form.label :email %>
+<div class="article-title">
+    <h2 class="center">
+    Email:  
+    <br>    
     <%= form.text_field :email %>
-  </div>
+    </h2>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="article-title">
+    <h2 class="center">
+    Password:  
+    <br>    
+    <%= form.text_field :password, type: "password" %>
+    </h2>
+</div>
+
+    <button class="btn btn-primary center" type="submit">Create account</button>
+</div>
 <% end %>

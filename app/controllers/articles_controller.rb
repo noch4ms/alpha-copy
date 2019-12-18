@@ -1,10 +1,12 @@
 class ArticlesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.all.reverse
+    
   end
 
   # GET /articles/1
@@ -24,9 +26,9 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    
+
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = User.find(session[:user_id])
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }

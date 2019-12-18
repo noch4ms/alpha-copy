@@ -10,18 +10,26 @@
       </ul>
     </div>
   <% end %>
+<div class="article-title">
+    <h2 class="center">
+    Title:       
+    <% if session[:user_id] == article.user.id || session[:user_id] == 1 %>
+        <%= form.text_field :title %>
+    <% else %>
+        <%= form.label :title %>
+    <% end %>
+    </h2>
+</div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+<div class="well col-xs-8 col-xs-offset-2 center">
+    <h4 class="center">
+    Description:
+    </h4>
+    <div class="article-body">
+        <%= form.text_area :description, class: "form-control", id:"exampleFormControlTextarea1" %>
+    </div>
+    <br>
+    <button class="btn btn-primary center" type="submit">Edit</button>
+</div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

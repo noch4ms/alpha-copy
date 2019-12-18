@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% if session[:user_id] != 1 %>
+    <div class="well col-xs-8 col-xs-offset-2 center">
+        <h1>You shall not pass!</h1>
+        <%= link_to "Home", root_path, class: "btn btn-xs btn-success active" %>
+    </div>
+<% else %>
 <h1>Users</h1>
 
 <table>
@@ -27,3 +32,4 @@
 <br>
 
 <%= link_to 'New User', new_user_path %> | <%= link_to "Articles", articles_path %>
+<% end %>

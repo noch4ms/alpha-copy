@@ -12,6 +12,18 @@ $navbar-default-bg: #000;
   font-weight: bold;
 }
 
+#nologo {
+  float: left;
+  font-size: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.whitecl {
+    color: #fff;
+}
+
 .center {
   text-align: center;
 }
@@ -33,6 +45,20 @@ $navbar-default-bg: #000;
 .btn-xlarge {
   font-size: 1.7em;
   background-color: black;
+}
+
+.author {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.description {
+    margin-top: 0;
+}
+
+.article-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
 }
 
 footer {
